@@ -1,73 +1,91 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Magic Transporters API - README
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Welcome to the **Magic Transporters API**! Dive into the future of logistics with our cutting-edge transporters that utilize virtual magic to move things easily and efficiently.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Task Overview
+- In the world of Magic Transporters, there are special people known as Magic
+Movers. They use nifty gadgets to move important things. Fueled by virtual magic,
+these Movers go on quick missions to carry items around.
 
-## Description
+1. A Magic Mover has:
+- Weight limit (the most they can carry);
+- Energy (their total magic power);
+- Quest state (what they’re currently doing: resting, loading, on a mission, or
+done).
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+2. Each Magic Item they carry has:
+- Name (what it’s called);
+- Weight (how much magic power it needs);
 
-## Installation
+3. Develop a REST API to:
+- add a Magic Mover;
+- add a Magic Item;
+- Load a Magic Mover with items, creating a log of this activitiy (loading state);
+- Start a Mission — update the Magic Mover’s state to on a mission and stop loading more, creating a log of this activitiy (on a mission);
+- End a Mission — unload everything from the Magic Mover, creating a log of this activitiy (mission complete / done);
+-Check who completed the most missions with a simple list.
 
-```bash
-$ npm install
-```
+## Requirements
+Follow these simple rules:
+1. Functional requirements:
+- Don’t give Magic Movers too much to carry for efficiency;
+- Make a simple list showing who completed the most missions.
 
-## Running the app
+2. Non-functional requirements:
+- Make sure the project is easy to build and run;
+- Set up any needed data before starting (like starting a video game);
+- Use express in Node.js or nestjs framework.
+- Use Typescript
 
-```bash
-# development
-$ npm run start
+## Postman Collection
+To test the API, you can download the Postman collection by:
 
-# watch mode
-$ npm run start:dev
+[Download Magic Transporters API POSTMAN Collection](https://github.com/abod3e4/magic-transporters/blob/main/Magic%20Transporters.postman_collection.json)
 
-# production mode
-$ npm run start:prod
-```
 
-## Test
+## Let's Begin
 
-```bash
-# unit tests
-$ npm run test
+Welcome to the setup guide for the Magic Transporters API. Follow these steps to quickly get it up and running on your local machine for development and testing.
 
-# e2e tests
-$ npm run test:e2e
+### Prerequisites
 
-# test coverage
-$ npm run test:cov
-```
+Make sure your system has the following prerequisites installed:
+- Node.js (v20.9.0)
+- npm (Node Package Manager)
+- MongoDB 
 
-## Support
+### Installation  Steps
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+1. **Extract The files**
 
-## Stay in touch
+2. **Go to the project directory**
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+   Change into the project directory:
+   ```
+   cd magic-transporters
+   ```
 
-## License
+3. **Install Dependencies**
 
-Nest is [MIT licensed](LICENSE).
+   Install all the required dependencies by executing the following command:
+   ```
+   npm install
+   ```
+
+4. **Configure Environment Variables**
+
+   Create a file named .env in the root directory. Define the necessary environment variables based on your setup:
+   ```
+   DB_URI=mongodb://127.0.0.1:27017/magic-transporters
+   ```
+
+### Running the Project
+    Run the app:
+    # development
+    ```
+    $ npm run start
+    ```
+    # watch mode
+    ```
+    $ npm run start:dev
+    ```
