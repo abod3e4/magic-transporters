@@ -1,0 +1,804 @@
+{
+	"info": {
+		"_postman_id": "ca91fb3e-1cb3-4f95-9b3f-25b63da54de3",
+		"name": "Magic Transporters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14087641"
+	},
+	"item": [
+		{
+			"name": "Movers",
+			"item": [
+				{
+					"name": "Create Mover",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"weightLimit\": 350,\r\n    \"energy\": 1500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movers",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Mover",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"weightLimit\": 350,\r\n    \"energy\": 1500\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/movers/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"movers",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "310"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"136-e03yZEH/qTm927eIfX/qzBwygu4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 05:57:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"data\": {\n        \"weightLimit\": 350,\n        \"energy\": 1500,\n        \"questState\": \"Resting\",\n        \"currentWeight\": 0,\n        \"currentEnergy\": 0,\n        \"canCarryMore\": true,\n        \"missionsCompletedCount\": 0,\n        \"items\": [],\n        \"_id\": \"66235946b7ec14f09591896a\",\n        \"createdAt\": \"2024-04-20T05:57:26.706Z\",\n        \"updatedAt\": \"2024-04-20T05:57:26.706Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Movers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movers",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Movers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/movers/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"movers",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "852"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"354-/oU8DqfyfWMKmuMJeWHNKayPZAU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 05:57:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": [\n        {\n            \"_id\": \"6622bcfac6957890e0748a1e\",\n            \"weightLimit\": 1000,\n            \"energy\": 4000,\n            \"questState\": \"Done\",\n            \"currentWeight\": 0,\n            \"currentEnergy\": 0,\n            \"canCarryMore\": true,\n            \"missionsCompletedCount\": 9,\n            \"items\": [],\n            \"createdAt\": \"2024-04-19T18:50:34.224Z\",\n            \"updatedAt\": \"2024-04-20T04:59:28.794Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"662346b7687a0a4cf0266a5c\",\n            \"weightLimit\": 3000,\n            \"energy\": 2000,\n            \"questState\": \"Resting\",\n            \"currentWeight\": 0,\n            \"currentEnergy\": 0,\n            \"canCarryMore\": true,\n            \"missionsCompletedCount\": 10,\n            \"items\": [],\n            \"createdAt\": \"2024-04-20T04:38:15.067Z\",\n            \"updatedAt\": \"2024-04-20T04:38:15.067Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66235946b7ec14f09591896a\",\n            \"weightLimit\": 350,\n            \"energy\": 1500,\n            \"questState\": \"Resting\",\n            \"currentWeight\": 0,\n            \"currentEnergy\": 0,\n            \"canCarryMore\": true,\n            \"missionsCompletedCount\": 0,\n            \"items\": [],\n            \"createdAt\": \"2024-04-20T05:57:26.706Z\",\n            \"updatedAt\": \"2024-04-20T05:57:26.706Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Load Mover",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"items\": [\"6622c6955590bb20704f1409\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movers/load/66235946b7ec14f09591896a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movers",
+								"load",
+								"66235946b7ec14f09591896a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Load Mover",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"items\": [\"6622c6875590bb20704f1407\", \"6622c6955590bb20704f1409\", \"66233ba8966b2efd1462f5a5\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/movers/load/662346b7687a0a4cf0266a5c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"movers",
+										"load",
+										"662346b7687a0a4cf0266a5c"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "396"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18c-nZqnJKSjcs541ZxVSxHvhKTnTk4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 05:58:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"data\": {\n        \"_id\": \"662346b7687a0a4cf0266a5c\",\n        \"weightLimit\": 3000,\n        \"energy\": 2000,\n        \"questState\": \"Loading\",\n        \"currentWeight\": 900,\n        \"currentEnergy\": 900,\n        \"canCarryMore\": true,\n        \"missionsCompletedCount\": 10,\n        \"items\": [\n            \"6622c6875590bb20704f1407\",\n            \"6622c6955590bb20704f1409\",\n            \"66233ba8966b2efd1462f5a5\"\n        ],\n        \"createdAt\": \"2024-04-20T04:38:15.067Z\",\n        \"updatedAt\": \"2024-04-20T05:58:08.612Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Load Mover",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"items\": [\"6622c6955590bb20704f1409\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/movers/load/66235946b7ec14f09591896a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"movers",
+										"load",
+										"66235946b7ec14f09591896a"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"154-67R5gACx/NdWjLS8khy+rGYty48\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 06:00:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"data\": {\n        \"_id\": \"66235946b7ec14f09591896a\",\n        \"weightLimit\": 350,\n        \"energy\": 1500,\n        \"questState\": \"Loading\",\n        \"currentWeight\": 300,\n        \"currentEnergy\": 300,\n        \"canCarryMore\": true,\n        \"missionsCompletedCount\": 0,\n        \"items\": [\n            \"6622c6955590bb20704f1409\"\n        ],\n        \"createdAt\": \"2024-04-20T05:57:26.706Z\",\n        \"updatedAt\": \"2024-04-20T06:00:44.483Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Mover State",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questState\": \"On a mission\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movers/start/662346b7687a0a4cf0266a5c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movers",
+								"start",
+								"662346b7687a0a4cf0266a5c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Load Mover Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"questState\": \"On a mission\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/movers/start/662346b7687a0a4cf0266a5c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"movers",
+										"start",
+										"662346b7687a0a4cf0266a5c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"192-cf72ThKnHqgm83GyL6P/b2H/KAM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 05:59:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"662346b7687a0a4cf0266a5c\",\n        \"weightLimit\": 3000,\n        \"energy\": 2000,\n        \"questState\": \"On a mission\",\n        \"currentWeight\": 900,\n        \"currentEnergy\": 900,\n        \"canCarryMore\": false,\n        \"missionsCompletedCount\": 10,\n        \"items\": [\n            \"6622c6875590bb20704f1407\",\n            \"6622c6955590bb20704f1409\",\n            \"66233ba8966b2efd1462f5a5\"\n        ],\n        \"createdAt\": \"2024-04-20T04:38:15.067Z\",\n        \"updatedAt\": \"2024-04-20T05:59:27.920Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "End Mover Mission",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questState\": \"On a mission\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movers/end/662346b7687a0a4cf0266a5c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movers",
+								"end",
+								"662346b7687a0a4cf0266a5c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Mover State Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"questState\": \"On a mission\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/movers/end/662346b7687a0a4cf0266a5c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"movers",
+										"end",
+										"662346b7687a0a4cf0266a5c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"135-+S1WTDafO9msDH4lwAyL8AaMjUQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 05:59:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"662346b7687a0a4cf0266a5c\",\n        \"weightLimit\": 3000,\n        \"energy\": 2000,\n        \"questState\": \"Done\",\n        \"currentWeight\": 0,\n        \"currentEnergy\": 0,\n        \"canCarryMore\": true,\n        \"missionsCompletedCount\": 11,\n        \"items\": [],\n        \"createdAt\": \"2024-04-20T04:38:15.067Z\",\n        \"updatedAt\": \"2024-04-20T05:59:56.967Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Movers With Most Completed Missions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questState\": \"On a mission\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movers/most_completed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movers",
+								"most_completed"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "End Mover Mission Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"questState\": \"On a mission\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/movers/most_completed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"movers",
+										"most_completed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "879"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36f-q65hMt8VqqwZI/Ja4RSlAlTEM3M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 06:00:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": [\n        {\n            \"_id\": \"662346b7687a0a4cf0266a5c\",\n            \"weightLimit\": 3000,\n            \"energy\": 2000,\n            \"questState\": \"Done\",\n            \"currentWeight\": 0,\n            \"currentEnergy\": 0,\n            \"canCarryMore\": true,\n            \"missionsCompletedCount\": 11,\n            \"items\": [],\n            \"createdAt\": \"2024-04-20T04:38:15.067Z\",\n            \"updatedAt\": \"2024-04-20T05:59:56.967Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6622bcfac6957890e0748a1e\",\n            \"weightLimit\": 1000,\n            \"energy\": 4000,\n            \"questState\": \"Done\",\n            \"currentWeight\": 0,\n            \"currentEnergy\": 0,\n            \"canCarryMore\": true,\n            \"missionsCompletedCount\": 9,\n            \"items\": [],\n            \"createdAt\": \"2024-04-19T18:50:34.224Z\",\n            \"updatedAt\": \"2024-04-20T04:59:28.794Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66235946b7ec14f09591896a\",\n            \"weightLimit\": 350,\n            \"energy\": 1500,\n            \"questState\": \"Loading\",\n            \"currentWeight\": 300,\n            \"currentEnergy\": 300,\n            \"canCarryMore\": true,\n            \"missionsCompletedCount\": 0,\n            \"items\": [\n                \"6622c6955590bb20704f1409\"\n            ],\n            \"createdAt\": \"2024-04-20T05:57:26.706Z\",\n            \"updatedAt\": \"2024-04-20T06:00:44.483Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Create Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"item 6\",\r\n    \"weight\": 750\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/items/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Item",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"item 6\",\r\n    \"weight\": 750\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/items/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"items",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-reDEToPNBMur+SBZzw1/sEUek7Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 05:56:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"data\": {\n        \"name\": \"item 6\",\n        \"weight\": 750,\n        \"_id\": \"66235915b7ec14f095918967\",\n        \"createdAt\": \"2024-04-20T05:56:37.068Z\",\n        \"updatedAt\": \"2024-04-20T05:56:37.068Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/items/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/items/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"items",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "943"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3af-BthfD3QL5UxOccb6qpYtbH0fgFk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 05:56:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": [\n        {\n            \"_id\": \"6622c6875590bb20704f1407\",\n            \"name\": \"item 1\",\n            \"weight\": 500,\n            \"createdAt\": \"2024-04-19T19:31:19.111Z\",\n            \"updatedAt\": \"2024-04-19T19:31:19.111Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6622c6955590bb20704f1409\",\n            \"name\": \"item 2\",\n            \"weight\": 300,\n            \"createdAt\": \"2024-04-19T19:31:33.450Z\",\n            \"updatedAt\": \"2024-04-19T19:31:33.450Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6622c6a75590bb20704f140b\",\n            \"name\": \"item 3\",\n            \"weight\": 400,\n            \"createdAt\": \"2024-04-19T19:31:51.123Z\",\n            \"updatedAt\": \"2024-04-19T19:31:51.123Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6622c6dd5590bb20704f1411\",\n            \"name\": \"item 4\",\n            \"weight\": 1000,\n            \"createdAt\": \"2024-04-19T19:32:45.303Z\",\n            \"updatedAt\": \"2024-04-19T19:32:45.303Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66233ba8966b2efd1462f5a5\",\n            \"name\": \"item 5\",\n            \"weight\": 100,\n            \"createdAt\": \"2024-04-20T03:51:04.383Z\",\n            \"updatedAt\": \"2024-04-20T03:51:04.383Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66235915b7ec14f095918967\",\n            \"name\": \"item 6\",\n            \"weight\": 750,\n            \"createdAt\": \"2024-04-20T05:56:37.068Z\",\n            \"updatedAt\": \"2024-04-20T05:56:37.068Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
